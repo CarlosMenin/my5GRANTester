@@ -42,7 +42,7 @@ func TestMultiUesDivision(numUes int, initialDelay int, delayStart int, numDivis
 
 	for i := 1; i <= numUes; i++ {
 		if i%intervalDivision == 1 && i > 1 {
-			delayPerUe = initialDelay / numDivisor
+			delayPerUe = delayPerUe / numDivisor
 		}
 
 		go registerSingleUe(cfg, &wg, msin, i, multiplier)
